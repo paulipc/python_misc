@@ -6,29 +6,31 @@
 
 import re
 
-def replacecomma(row,p):
+def replacecomma(row, p, stag, etag, lstag, letag):
     # p on Start:in positio
     # end pitaa loytaa startista eteenpain
-    epos=row.find('End',p)+1
+
+    epos=row.find(etag,p)+1
     s=row[0:p]
-    b=row[p:epos+2]
+    b=row[p:epos+letag-1]
     b=b.replace(';','.')
-    e=row[epos+2:]
+    e=row[epos+letag-1:]
 
     return s+b+e
 
-def replaceallcommas(row):
+def replaceallcommas(row, stag, etag):
     a=row
-    pos = [m.start() for m in re.finditer('Start', a)]
-
+    pos = [m.start() for m in re.finditer(stag, a)]
+    lstag = len(stag)
+    letag = len(etag)
     for i in pos:
-        b=replacecomma(a,i)
+        b=replacecomma(a, i, stag, etag, lstag, letag)
         a=b
 
     return a
 
 # main
 
-x = 'dk aokdj Start adkd a; dkaj End ; kdjas Start adkdjkas End adnasdkj Start dja; ; dalolEnd dkaoskjs'
-x=replaceallcommas(x)
+x = 'dk aokdj Starting adkd a; dkaj Ending ; kdjas Starting adkdjkas Ending adnasdkj Starting dja; ; dalolEnding dkaoskjs'
+x=replaceallcommas(x,'Starting','Ending')
 print x
