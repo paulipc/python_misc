@@ -6,7 +6,7 @@
 
 import re
 
-def replacecomma(row, p, stag, etag, lstag, letag):
+def replacecomma(row, p, etag, letag):
     # p on Start:in positio
     # end pitaa loytaa startista eteenpain
 
@@ -19,15 +19,12 @@ def replacecomma(row, p, stag, etag, lstag, letag):
     return s+b+e
 
 def replaceallcommas(row, stag, etag):
-    a=row
-    pos = [m.start() for m in re.finditer(stag, a)]
-    lstag = len(stag)
+    pos = [m.start() for m in re.finditer(stag, row)]
     letag = len(etag)
     for i in pos:
-        b=replacecomma(a, i, stag, etag, lstag, letag)
-        a=b
+        row=replacecomma(row, i, etag, letag)
 
-    return a
+    return row
 
 # main
 
