@@ -1,6 +1,6 @@
 # Misc Python Scripts
 
-## replacecommas.py
+## replacecomma.py
 
 Replaces all semicolons (;) with a dot (.). If semicolon is between two tabs (start and end).
 
