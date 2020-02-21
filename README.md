@@ -1,8 +1,10 @@
-# Python_misc
+# Misc Python Scripts
 
-## Pythonilla tehtyjä sekalaisia skriptejä
+## replacecommas.py
 
-Eka projekti on replaceallcommas, joka korvaa merkkijonossa olevat puolipisteet (;) pisteellä (.) jos puolipiste on kahden tagin välissä (start ja end). Helpottaa CSV:n käsittelyä kun CSV:ssä on ylimääräisiä puolipisteitä.
+Replaces all semicolons (;) with a dot (.). If semicolon is between two tabs (start and end).
+
+The idea is to make CSV munging easier when there are extra semicolons in rows.
 
 ## time_calc.py
 
