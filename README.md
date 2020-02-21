@@ -11,9 +11,10 @@ Eka projekti on replaceallcommas, joka korvaa merkkijonossa olevat puolipisteet 
 
 Converts minutes given to hours and minutes.
 
-### to_min(hh,mm)
+### ```to_min(hh,mm)```
 
-**usage:** to_min(hh,mm)
+**usage:** ```to_min(hh,mm)```
 
 Converts hours and minutes given to minutes.
 
+Does not care about days or 24h or something. Just converts both ways and the rest is for user.
