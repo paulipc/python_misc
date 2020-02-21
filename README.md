@@ -4,7 +4,7 @@
 
 Eka projekti on replaceallcommas, joka korvaa merkkijonossa olevat puolipisteet (;) pisteellä (.) jos puolipiste on kahden tagin välissä (start ja end). Helpottaa CSV:n käsittelyä kun CSV:ssä on ylimääräisiä puolipisteitä.
 
-## time_calc
+## time_calc.py
 
 ### ```to_hhmm(minutes)```
 **usage:** ```to_hhmm(minutes)```
