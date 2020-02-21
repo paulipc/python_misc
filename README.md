@@ -21,11 +21,15 @@ Does not care about days or 24h or something. Just converts both ways and the re
 
 ### Example:
 
-Calculate time difference with 04.45 - 17.00 and multiply by 5 (days)
+Calculate time difference with 04.45 - 17.00 and multiply by 5 time (if difference same for instance for 5 days).
 ```
-(to_min(17,00)-to_min(4,45))*5          # You get minutes of differencies for five days.
+>>> (to_min(17,00)-to_min(4,45))*5          # You get minutes of differencies for five days.
+3675
+>>>
 ```
 ...and more:
 ```
-to_hhmm((to_min(17,00)-to_min(4,45))*5) # You get hours and minutes for above minutes.
+>>> to_hhmm((to_min(17,00)-to_min(4,45))*5) # You get hours and minutes for above minutes.
+(61, 15)
+>>>
 ```
