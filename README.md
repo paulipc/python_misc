@@ -38,3 +38,7 @@ Calculate time difference with 04.45 - 17.00 and multiply by 5 time (if differen
 ## bigfiles.py
 
 Find big files (name and size) in Windows 10 filesystem. Before running set: path and size. Helps you in cleaning up your filesystem.
+
+## bigfiles2.py
+
+Better for Excel with ; separator.
